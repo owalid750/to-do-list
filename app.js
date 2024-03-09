@@ -1,12 +1,13 @@
 /* 
 Tasks
 
-1-use sweet alert if input is empty
+1-use sweet alert if input is empty  [Done]
 2- check if task is exist or no
 3- create delete all tasks button
 4 Create finish all tasks button
 5- add tasks to the local storage
 */
+
 
 // setting up variables
 
@@ -26,7 +27,12 @@ window.onload = function () {
 theAddButton.onclick = function () {
     //if input is empty
     if (theInput.value === "") {
-        console.log("no value")
+        console.log("no value");
+        Swal.fire({
+            title: "Alert!",
+            text: "You Must Enter A value!",
+            icon: "error"
+        });
     } else {
         let noTasksMessage = document.querySelector(".no-tasks-message");
         // check if span msg is exist
